@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "strictBindCallApply": true,
+    "outDir": "lib",
+    "useDefineForClassFields": false,
+    "esModuleInterop": true
+  }
+}
