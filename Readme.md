@@ -1,28 +1,48 @@
 # Tsconfigs
 
-tsconfig.json
+node
 ```
 {
-  "extends": "@wtflegal/dev-configs/tsconfigs/tsconfig.json",
-  "include": ["src", "vite.config.ts"]
+  "extends": "wtf-devconfigs",
+  "include": ["eslint.config.mjs", "src/**/*", "test/**/*"],
+  "compilerOptions": {
+    "noEmit": true
+  }
 }
 ```
 
-tsconfig.node.json
+vite+react
 ```
+
 {
-  "extends": "@wtflegal/dev-configs/tsconfigs/tsconfig.node.json"
+  "extends": "wtf-devconfigs",
+  "include": ["lib", "vite.config.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["lib/*"]
+    }
+  }
 }
 ```
 
 # Eslint
 ```
-module.exports = {
-  extends: [
-    require.resolve('@wtflegal/dev-configs/eslints/vite-react.cjs')
-  ],
-  parserOptions: {
-    tsconfigRootDir: __dirname,
+import sharedConfig from 'wtf-devconfigs'
+
+export default [
+  {
+    ignores: ['build/**'],
   },
-}
+  // dev-configs currently does not have types yet
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  ...sharedConfig,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.json'],
+      },
+    },
+  },
+]
 ```

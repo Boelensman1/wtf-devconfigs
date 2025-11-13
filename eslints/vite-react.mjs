@@ -1,16 +1,24 @@
 // @ts-check
 /// <reference path="../.declarations/eslint-plugin-react-hooks.d.ts" />
 import eslint from '@eslint/js'
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
+import nodePlugin from 'eslint-plugin-n'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import reactRefreshPlugin from 'eslint-plugin-react-refresh'
 
-export default tseslint.config(
+export default defineConfig(
   { ignores: ['dist/*', 'build/**', 'eslint.config.mjs'] },
   eslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
+  nodePlugin.configs['flat/recommended-module'],
+  {
+    rules: {
+      'no-undef': 'error', // not sure why this one is not part of the recommended rules
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
