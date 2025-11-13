@@ -9,17 +9,17 @@
   "author": "Wigger Boelens <me@wiggerboelens.com> (http://wiggerboelens.com/)",
   "license": "ISC",
   "peerDependencies": {
-    "@eslint/js": "^9.39.0",
-    "@tsconfig/node22": "^22.0.2",
+    "@eslint/js": "^9.39.1",
+    "@tsconfig/node22": "^22.0.3",
     "@types/node": "^22",
-    "@typescript-eslint/eslint-plugin": "^8.46.2",
-    "@typescript-eslint/parser": "^8.46.2",
-    "eslint": "^9.39.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
+    "typescript-eslint": "^8.46.4"
   }
 }
