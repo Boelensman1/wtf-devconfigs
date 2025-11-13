@@ -3,17 +3,17 @@
 import eslint from '@eslint/js'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
-import nodePlugin from 'eslint-plugin-n'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import reactRefreshPlugin from 'eslint-plugin-react-refresh'
+
+// no eslint-plugin-n as it doesn't make sense to use that in a browser env
 
 export default defineConfig(
   { ignores: ['dist/*', 'build/**', 'eslint.config.mjs'] },
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  nodePlugin.configs['flat/recommended-module'],
   {
     rules: {
       'no-undef': 'error', // not sure why this one is not part of the recommended rules
