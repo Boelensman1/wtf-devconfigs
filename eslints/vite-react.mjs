@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import reactRefreshPlugin from 'eslint-plugin-react-refresh'
+import globals from 'globals'
 
 // no eslint-plugin-n as it doesn't make sense to use that in a browser env
 
@@ -15,6 +16,11 @@ export default defineConfig(
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
   {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+    },
     rules: {
       'no-undef': 'error', // not sure why this one is not part of the recommended rules
     },
