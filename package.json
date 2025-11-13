@@ -1,16 +1,13 @@
 {
-  "name": "@wtflegal/dev-configs",
+  "name": "wtf-devconfigs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wtflegal/dev-configs.git"
   },
   "version": "0.2.5",
   "description": "",
-  "keywords": [],
-  "author": "",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "author": "Wigger Boelens <me@wiggerboelens.com> (http://wiggerboelens.com/)",
+  "license": "ISC",
   "peerDependencies": {
     "@eslint/js": "^9.39.0",
     "@tsconfig/node22": "^22.0.2",
