@@ -13,6 +13,7 @@ export default defineConfig(
   {
     rules: {
       'no-undef': 'error', // not sure why this one is not part of the recommended rules
+      'no-useless-rename': 'error',
     },
   },
 )
