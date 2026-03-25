@@ -18,10 +18,10 @@ importers:
         specifier: ^22
         version: 22.19.15
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.57.1
+        specifier: ^8.57.2
         version: 8.57.2(@typescript-eslint/parser@8.57.2(eslint@9.39.4)(typescript@5.9.3))(eslint@9.39.4)(typescript@5.9.3)
       '@typescript-eslint/parser':
-        specifier: ^8.57.1
+        specifier: ^8.57.2
         version: 8.57.2(eslint@9.39.4)(typescript@5.9.3)
       eslint:
         specifier: ^9.39.4
@@ -42,7 +42,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       typescript-eslint:
-        specifier: ^8.57.1
+        specifier: ^8.57.2
         version: 8.57.2(eslint@9.39.4)(typescript@5.9.3)
 
 packages:
