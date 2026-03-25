@@ -3,7 +3,7 @@
 node
 ```
 {
-  "extends": "wtf-devconfigs",
+  "extends": "wtf-devconfigs/tsconfigs/node/tsconfig.json",
   "include": ["eslint.config.mjs", "src/**/*", "test/**/*"],
   "compilerOptions": {
     "noEmit": true
@@ -15,7 +15,7 @@ vite+react
 ```
 
 {
-  "extends": "wtf-devconfigs",
+  "extends": "wtf-devconfigs/tsconfigs/vite/tsconfig.json",
   "include": ["lib", "vite.config.ts"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -28,7 +28,8 @@ vite+react
 
 # Eslint
 ```
-import sharedConfig from 'wtf-devconfigs'
+import sharedConfig from 'wtf-devconfigs/eslints/typescript.mjs'
+
 
 export default [
   {
