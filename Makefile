@@ -1,4 +1,4 @@
 publish:
-	npm publish
+	pnpm publish
 
 .PHONY: publish

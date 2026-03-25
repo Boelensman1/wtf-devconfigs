@@ -1,10 +1,10 @@
 {
   "name": "wtf-devconfigs",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "",
   "author": "Wigger Boelens <me@wiggerboelens.com> (http://wiggerboelens.com/)",
   "license": "ISC",
-  "peerDependencies": {
+  "dependencies": {
     "@eslint/js": "^9.38.0",
     "@tsconfig/node22": "^22.0.5",
     "@types/node": "^22",
